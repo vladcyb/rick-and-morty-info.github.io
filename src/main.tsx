@@ -9,7 +9,9 @@ import { routes } from './routes'
 
 import './index.scss'
 
-const router = createBrowserRouter(routes)
+const router = createBrowserRouter(routes, {
+  basename: import.meta.env.BASE_URL,
+})
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
